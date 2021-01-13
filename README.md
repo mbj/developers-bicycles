@@ -8,7 +8,7 @@ date: 2021
 
 Humans outclass all living beings in terms of movement efficiency when using a bicycle.
 
-We should have the equivalents of bicycles for the brains of developers.
+We should have the equivalents of bicycles for developer brains.
 
 ---
 
@@ -16,28 +16,28 @@ We should have the equivalents of bicycles for the brains of developers.
 
 This talk is about `mutant`, a tool to improve developer efficiency.
 
-Before going into details of the tool, lets focus on the need for more
+Before going into details of the tool, let's focus on the need for more
 efficient reviews.
 
 ---
 
 ## Cost of software development
 
-The most valuable and indeterministic resource in software development is: human time.
+The most valuable and indeterministic resource in software development is human time.
 
-* Human time is the biggest expense on software development.
-* Human performance varies with each window.
+* Human time is the biggest software development expense.
+* Human performance varies with each time window.
 * Some time windows are significantly more productive than others.
-* Some time windows are actively negatively affecting the software product.
+* Some time windows are actively affecting the software product negatively.
 
 ---
 
 ## Solution?
 
-Provide the developers with tools and processes to increase their
-efficiency in the productive time windows.
+Provide developers with tools and processes to increase their
+efficiency in productive time windows.
 
-But decrease the likelihood their bad moments lead to a reduction in
+But decrease the likelihood that their bad moments lead to a reduction in
 product value (also known as bugs).
 
 All of this is easier said than done.
@@ -48,8 +48,8 @@ All of this is easier said than done.
 
 At a high level we can aim for:
 
-1) Reduce feedback time on actionable work to get more done.
-2) Automate constraints to not regress the system without noticing.
+1) Reducing feedback time on actionable work to get more done.
+2) Automating constraints to not introduce regressions without noticing.
 
 On 1) with Ruby we have excellent feedback time. But what about 2), the constraints?
 
@@ -60,13 +60,13 @@ On 1) with Ruby we have excellent feedback time. But what about 2), the constrai
 * Types (Brand new! Future topic!)
 * Tests
 
-But are the tests good constraint?
+But are tests good constraints?
 
 ---
 
 ## Tests as Constraints
 
-Tests are, at a high level: A set of input output relations.
+Tests, at a high level, are: A set of input output relations.
 
 * Fail a test: Fix the code (or the test).
 * Pass a test: Move on?
@@ -75,8 +75,8 @@ Tests are, at a high level: A set of input output relations.
 
 ## Coverage
 
-A Passing test suite only signals the **lower bound** of
-semantics in a program can express.
+A passing test suite only signals the **lower bound** of
+semantics a program can express.
 
 What constrains the **upper bound**?
 
@@ -86,10 +86,10 @@ Enter code reviews.
 
 ## Code reviews
 
-Manual verification there is nothing the code does "extra"
-than passing the tests.
+Manual verification that there is nothing the code does in addition to
+passing the tests.
 
-This can be in part automated! Saving time, increasing efficiency.
+This can, in part, be automated! Saving time, increasing efficiency.
 
 ---
 
@@ -106,7 +106,7 @@ Uncovered Mutation (tests still pass):
  end
 ```
 
-`do_a` call site can be removed without tests noticing.
+The `do_a` call site can be removed without the tests noticing.
 
 ---
 
@@ -115,9 +115,9 @@ Uncovered Mutation (tests still pass):
 The mutation testing tool tells you:
 
 > Hey Human: Either remove `do_a` or prove to me it should exist
-> via a test, but for now its floating.
+> via a test, but for now it's floating.
 
-The reviewer saved time, he can act on this information and
+The reviewer saved time and can act on this information to
 verify if `do_a` is actually needed.
 
 ---
@@ -128,13 +128,13 @@ verify if `do_a` is actually needed.
 
 ---
 
-## Consequence
+## Consequences
 
-Consistently applying mutation testing via `mutant` reduces cost of software development.
+Consistently applying mutation testing using `mutant` reduces the cost of software development.
 
-More time is spent on the non automatable parts.
+More time can be spent on non automatable parts.
 
-And most importantly: New developers can **self train** without having to have access to peers!
+Most importantly: New developers can **self train** without needing access to peers!
 
 **Reduces the entry barrier to software development with Ruby.**
 
@@ -142,4 +142,4 @@ And most importantly: New developers can **self train** without having to have a
 
 Mutant is commercial software.
 
-But its: **Free to use for opensource projects**.
+But it's **Free to use for opensource projects**.
