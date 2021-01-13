@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Markus Schirp">
+  <meta name="dcterms.date" content="2021-01-01">
+  <title>Development with Bicycles for Brains</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="./reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="./reveal.js/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="./reveal.js/dist/theme/solarized.css" id="theme">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Development with Bicycles for Brains</h1>
+  <p class="author">Markus Schirp</p>
+  <p class="date">2021</p>
+</section>
+
+<section id="intro" class="slide level2">
+<h2>Intro</h2>
+<p>Humans outclass all living beings in terms of movement efficiency when using a bicycle.</p>
+<p>We should have the equivalents of bicycles for the brains of developers.</p>
+</section>
+<section id="outline" class="slide level2">
+<h2>Outline</h2>
+<p>This talk is about <code>mutant</code> a tool to improve developer efficiency.</p>
+<p>Before going into details of the tool, lets focus on the need for more efficient reviews.</p>
+</section>
+<section id="cost-of-software-development" class="slide level2">
+<h2>Cost of software development</h2>
+<p>The most valuable and indetermnistic resource in software development is: Human time.</p>
+<ul>
+<li>Human time is the biggest expense on software development.</li>
+<li>Human performance varies with each window.</li>
+<li>Some time windows are significantly more productive than others.</li>
+<li>Some time windows are actively negatively affecting the software product.</li>
+</ul>
+</section>
+<section id="solution" class="slide level2">
+<h2>Solution?</h2>
+<p>Provide the developers will tools and processes to increase their efficiency in the productive time windows.</p>
+<p>But decrease the likeliness their bad moments to lead to a reduction in product value (also known as bugs).</p>
+<p>All of this is easier said than done.</p>
+</section>
+<section id="more-technical-solution" class="slide level2">
+<h2>More Technical Solution</h2>
+<p>At a high level we can aim for:</p>
+<ol type="1">
+<li>Reduce feedback time on actionable work to get more done.</li>
+<li>Automate constraints to not regress the system without noticing.</li>
+</ol>
+<p>On 1) with Ruby we have excellent feedback time. But what about 2), the constraints?</p>
+</section>
+<section id="available-constraints" class="slide level2">
+<h2>Available constraints</h2>
+<ul>
+<li>Types (Brand new! Future topic!)</li>
+<li>Tests</li>
+</ul>
+<p>But are the tests good constraint?</p>
+</section>
+<section id="tests-as-constraints" class="slide level2">
+<h2>Tests as Constraints</h2>
+<p>Tests are, at a high level: A set of input output relations.</p>
+<ul>
+<li>Fail a test: Fix the code (or the test).</li>
+<li>Pass a test: Move on?</li>
+</ul>
+</section>
+<section id="coverage" class="slide level2">
+<h2>Coverage</h2>
+<p>A Passing test suite only signals the <strong>lower bound</strong> of semantics in a program can express.</p>
+<p>What constraints the <strong>upper bound</strong>?</p>
+<p>Enter code reviews.</p>
+</section>
+<section id="code-reviews" class="slide level2">
+<h2>Code reviews</h2>
+<p>Manual verification there is nothing the code does “extra” than passing the tests.</p>
+<p>This can be in part automated! Saving time, increasing efficiency.</p>
+</section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<p>Automated code review output example:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode diff"><code class="sourceCode diff"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Uncovered Mutation (tests still pass):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a> def foo</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="st">-  do_a</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>   do_b</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a> end</span></code></pre></div>
+<p><code>do_a</code> call side can be removed without tests noticing.</p>
+</section>
+<section id="interpretation" class="slide level2">
+<h2>Interpretation</h2>
+<p>The mutation testing tool tells you:</p>
+<blockquote>
+<p>Hey Human: Either remove <code>do_a</code> or proof to me it should exist via a test, but for now its floating.</p>
+</blockquote>
+<p>The reviewer saved time, he can act on this information and verify if <code>do_a</code> is actually needed.</p>
+</section>
+<section id="live-coding" class="slide level2">
+<h2>Live coding</h2>
+<p>[here mutant gets shown in action to the audience]</p>
+</section>
+<section id="consequence" class="slide level2">
+<h2>Consequence</h2>
+<p>Consistently applying mutation testing via <code>mutant</code> reduces cost of software development.</p>
+<p>More time is spend on the non automatable parts.</p>
+<p>And most importantly: New developers can <strong>self train</strong> without having to have access to peers!</p>
+<p><strong>Reduces the entry barrier to software development with Ruby.</strong></p>
+</section>
+<section id="marketing" class="slide level2">
+<h2>Marketing</h2>
+<p>Mutant is commercial software.</p>
+<p>But its: <strong>Free to use for opensource projects</strong>.</p>
+</section>
+    </div>
+  </div>
+
+  <script src="./reveal.js/dist/reveal.js"></script>
+
+  // reveal.js plugins
+  <script src="./reveal.js/plugin/notes/notes.js"></script>
+  <script src="./reveal.js/plugin/search/search.js"></script>
+  <script src="./reveal.js/plugin/zoom/zoom.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // reveal.js plugins
+        plugins: [
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
