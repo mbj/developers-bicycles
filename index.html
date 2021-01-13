@@ -101,12 +101,12 @@
 </section>
 <section id="outline" class="slide level2">
 <h2>Outline</h2>
-<p>This talk is about <code>mutant</code> a tool to improve developer efficiency.</p>
+<p>This talk is about <code>mutant</code>, a tool to improve developer efficiency.</p>
 <p>Before going into details of the tool, lets focus on the need for more efficient reviews.</p>
 </section>
 <section id="cost-of-software-development" class="slide level2">
 <h2>Cost of software development</h2>
-<p>The most valuable and indetermnistic resource in software development is: Human time.</p>
+<p>The most valuable and indeterministic resource in software development is: human time.</p>
 <ul>
 <li>Human time is the biggest expense on software development.</li>
 <li>Human performance varies with each window.</li>
@@ -116,8 +116,8 @@
 </section>
 <section id="solution" class="slide level2">
 <h2>Solution?</h2>
-<p>Provide the developers will tools and processes to increase their efficiency in the productive time windows.</p>
-<p>But decrease the likeliness their bad moments to lead to a reduction in product value (also known as bugs).</p>
+<p>Provide the developers with tools and processes to increase their efficiency in the productive time windows.</p>
+<p>But decrease the likelihood their bad moments lead to a reduction in product value (also known as bugs).</p>
 <p>All of this is easier said than done.</p>
 </section>
 <section id="more-technical-solution" class="slide level2">
@@ -148,7 +148,7 @@
 <section id="coverage" class="slide level2">
 <h2>Coverage</h2>
 <p>A Passing test suite only signals the <strong>lower bound</strong> of semantics in a program can express.</p>
-<p>What constraints the <strong>upper bound</strong>?</p>
+<p>What constrains the <strong>upper bound</strong>?</p>
 <p>Enter code reviews.</p>
 </section>
 <section id="code-reviews" class="slide level2">
@@ -165,13 +165,13 @@
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="st">-  do_a</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>   do_b</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a> end</span></code></pre></div>
-<p><code>do_a</code> call side can be removed without tests noticing.</p>
+<p><code>do_a</code> call site can be removed without tests noticing.</p>
 </section>
 <section id="interpretation" class="slide level2">
 <h2>Interpretation</h2>
 <p>The mutation testing tool tells you:</p>
 <blockquote>
-<p>Hey Human: Either remove <code>do_a</code> or proof to me it should exist via a test, but for now its floating.</p>
+<p>Hey Human: Either remove <code>do_a</code> or prove to me it should exist via a test, but for now its floating.</p>
 </blockquote>
 <p>The reviewer saved time, he can act on this information and verify if <code>do_a</code> is actually needed.</p>
 </section>
@@ -182,7 +182,7 @@
 <section id="consequence" class="slide level2">
 <h2>Consequence</h2>
 <p>Consistently applying mutation testing via <code>mutant</code> reduces cost of software development.</p>
-<p>More time is spend on the non automatable parts.</p>
+<p>More time is spent on the non automatable parts.</p>
 <p>And most importantly: New developers can <strong>self train</strong> without having to have access to peers!</p>
 <p><strong>Reduces the entry barrier to software development with Ruby.</strong></p>
 </section>

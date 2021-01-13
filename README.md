@@ -14,7 +14,7 @@ We should have the equivalents of bicycles for the brains of developers.
 
 ## Outline
 
-This talk is about `mutant` a tool to improve developer efficiency.
+This talk is about `mutant`, a tool to improve developer efficiency.
 
 Before going into details of the tool, lets focus on the need for more
 efficient reviews.
@@ -23,7 +23,7 @@ efficient reviews.
 
 ## Cost of software development
 
-The most valuable and indetermnistic resource in software development is: Human time.
+The most valuable and indeterministic resource in software development is: human time.
 
 * Human time is the biggest expense on software development.
 * Human performance varies with each window.
@@ -34,10 +34,10 @@ The most valuable and indetermnistic resource in software development is: Human 
 
 ## Solution?
 
-Provide the developers will tools and processes to increase their
+Provide the developers with tools and processes to increase their
 efficiency in the productive time windows.
 
-But decrease the likeliness their bad moments to lead to a reduction in
+But decrease the likelihood their bad moments lead to a reduction in
 product value (also known as bugs).
 
 All of this is easier said than done.
@@ -78,7 +78,7 @@ Tests are, at a high level: A set of input output relations.
 A Passing test suite only signals the **lower bound** of
 semantics in a program can express.
 
-What constraints the **upper bound**?
+What constrains the **upper bound**?
 
 Enter code reviews.
 
@@ -106,7 +106,7 @@ Uncovered Mutation (tests still pass):
  end
 ```
 
-`do_a` call side can be removed without tests noticing.
+`do_a` call site can be removed without tests noticing.
 
 ---
 
@@ -114,7 +114,7 @@ Uncovered Mutation (tests still pass):
 
 The mutation testing tool tells you:
 
-> Hey Human: Either remove `do_a` or proof to me it should exist
+> Hey Human: Either remove `do_a` or prove to me it should exist
 > via a test, but for now its floating.
 
 The reviewer saved time, he can act on this information and
@@ -132,7 +132,7 @@ verify if `do_a` is actually needed.
 
 Consistently applying mutation testing via `mutant` reduces cost of software development.
 
-More time is spend on the non automatable parts.
+More time is spent on the non automatable parts.
 
 And most importantly: New developers can **self train** without having to have access to peers!
 
