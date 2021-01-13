@@ -21,6 +21,7 @@
     pre > code.sourceCode { white-space: pre; position: relative; }
     pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
     div.sourceCode { margin: 1em 0; }
     pre.sourceCode { margin: 0; }
@@ -97,35 +98,35 @@
 <section id="intro" class="slide level2">
 <h2>Intro</h2>
 <p>Humans outclass all living beings in terms of movement efficiency when using a bicycle.</p>
-<p>We should have the equivalents of bicycles for the brains of developers.</p>
+<p>We should have the equivalents of bicycles for developer brains.</p>
 </section>
 <section id="outline" class="slide level2">
 <h2>Outline</h2>
 <p>This talk is about <code>mutant</code>, a tool to improve developer efficiency.</p>
-<p>Before going into details of the tool, lets focus on the need for more efficient reviews.</p>
+<p>Before going into details of the tool, let’s focus on the need for more efficient reviews.</p>
 </section>
 <section id="cost-of-software-development" class="slide level2">
 <h2>Cost of software development</h2>
-<p>The most valuable and indeterministic resource in software development is: human time.</p>
+<p>The most valuable and indeterministic resource in software development is human time.</p>
 <ul>
-<li>Human time is the biggest expense on software development.</li>
-<li>Human performance varies with each window.</li>
+<li>Human time is the biggest software development expense.</li>
+<li>Human performance varies with each time window.</li>
 <li>Some time windows are significantly more productive than others.</li>
-<li>Some time windows are actively negatively affecting the software product.</li>
+<li>Some time windows are actively affecting the software product negatively.</li>
 </ul>
 </section>
 <section id="solution" class="slide level2">
 <h2>Solution?</h2>
-<p>Provide the developers with tools and processes to increase their efficiency in the productive time windows.</p>
-<p>But decrease the likelihood their bad moments lead to a reduction in product value (also known as bugs).</p>
+<p>Provide developers with tools and processes to increase their efficiency in productive time windows.</p>
+<p>But decrease the likelihood that their bad moments lead to a reduction in product value (also known as bugs).</p>
 <p>All of this is easier said than done.</p>
 </section>
 <section id="more-technical-solution" class="slide level2">
 <h2>More Technical Solution</h2>
 <p>At a high level we can aim for:</p>
 <ol type="1">
-<li>Reduce feedback time on actionable work to get more done.</li>
-<li>Automate constraints to not regress the system without noticing.</li>
+<li>Reducing feedback time on actionable work to get more done.</li>
+<li>Automating constraints to not introduce regressions without noticing.</li>
 </ol>
 <p>On 1) with Ruby we have excellent feedback time. But what about 2), the constraints?</p>
 </section>
@@ -135,11 +136,11 @@
 <li>Types (Brand new! Future topic!)</li>
 <li>Tests</li>
 </ul>
-<p>But are the tests good constraint?</p>
+<p>But are tests good constraints?</p>
 </section>
 <section id="tests-as-constraints" class="slide level2">
 <h2>Tests as Constraints</h2>
-<p>Tests are, at a high level: A set of input output relations.</p>
+<p>Tests, at a high level, are: A set of input output relations.</p>
 <ul>
 <li>Fail a test: Fix the code (or the test).</li>
 <li>Pass a test: Move on?</li>
@@ -147,14 +148,14 @@
 </section>
 <section id="coverage" class="slide level2">
 <h2>Coverage</h2>
-<p>A Passing test suite only signals the <strong>lower bound</strong> of semantics in a program can express.</p>
+<p>A passing test suite only signals the <strong>lower bound</strong> of semantics a program can express.</p>
 <p>What constrains the <strong>upper bound</strong>?</p>
 <p>Enter code reviews.</p>
 </section>
 <section id="code-reviews" class="slide level2">
 <h2>Code reviews</h2>
-<p>Manual verification there is nothing the code does “extra” than passing the tests.</p>
-<p>This can be in part automated! Saving time, increasing efficiency.</p>
+<p>Manual verification that there is nothing the code does in addition to passing the tests.</p>
+<p>This can, in part, be automated! Saving time, increasing efficiency.</p>
 </section>
 <section id="example" class="slide level2">
 <h2>Example</h2>
@@ -165,31 +166,31 @@
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="st">-  do_a</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>   do_b</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a> end</span></code></pre></div>
-<p><code>do_a</code> call site can be removed without tests noticing.</p>
+<p>The <code>do_a</code> call site can be removed without the tests noticing.</p>
 </section>
 <section id="interpretation" class="slide level2">
 <h2>Interpretation</h2>
 <p>The mutation testing tool tells you:</p>
 <blockquote>
-<p>Hey Human: Either remove <code>do_a</code> or prove to me it should exist via a test, but for now its floating.</p>
+<p>Hey Human: Either remove <code>do_a</code> or prove to me it should exist via a test, but for now it’s floating.</p>
 </blockquote>
-<p>The reviewer saved time, he can act on this information and verify if <code>do_a</code> is actually needed.</p>
+<p>The reviewer saved time and can act on this information to verify if <code>do_a</code> is actually needed.</p>
 </section>
 <section id="live-coding" class="slide level2">
 <h2>Live coding</h2>
 <p>[here mutant gets shown in action to the audience]</p>
 </section>
-<section id="consequence" class="slide level2">
-<h2>Consequence</h2>
-<p>Consistently applying mutation testing via <code>mutant</code> reduces cost of software development.</p>
-<p>More time is spent on the non automatable parts.</p>
-<p>And most importantly: New developers can <strong>self train</strong> without having to have access to peers!</p>
+<section id="consequences" class="slide level2">
+<h2>Consequences</h2>
+<p>Consistently applying mutation testing using <code>mutant</code> reduces the cost of software development.</p>
+<p>More time can be spent on non automatable parts.</p>
+<p>Most importantly: New developers can <strong>self train</strong> without needing access to peers!</p>
 <p><strong>Reduces the entry barrier to software development with Ruby.</strong></p>
 </section>
 <section id="marketing" class="slide level2">
 <h2>Marketing</h2>
 <p>Mutant is commercial software.</p>
-<p>But its: <strong>Free to use for opensource projects</strong>.</p>
+<p>But it’s <strong>Free to use for opensource projects</strong>.</p>
 </section>
     </div>
   </div>
