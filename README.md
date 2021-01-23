@@ -143,3 +143,15 @@ Most importantly: New developers can **self train** without needing access to pe
 Mutant is commercial software.
 
 But it's **Free to use for opensource projects**.
+
+Find mutant:
+
+[https://github.com/mbj/mutant](https://github.com/mbj/mutant)
+
+Find me (on twitter):
+
+[https://twitter.com/\_m\_b\_j\_](https://twitter.com/_m_b_j_)
+
+Find this presentation (wihout the life coding part):
+
+[https://mbj.github.io/developers-bicycles](https://mbj.github.io/developers-bicycles)
